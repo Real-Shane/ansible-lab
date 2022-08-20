@@ -1,0 +1,13 @@
+---
+- hosts: defaults
+  remote_user: master
+  become: true
+  become_user: root
+
+  tasks:
+    - name: CREATING A FILE IN REMOTE MACHINE
+
+      file:
+
+        path: ~/Welcome/test.txt
+        state: touch
