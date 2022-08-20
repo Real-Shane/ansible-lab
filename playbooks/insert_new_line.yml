@@ -1,0 +1,13 @@
+---
+- hosts: defaults
+  remote_user: master
+  become: true
+  become_user: root
+
+  tasks:
+    - name: INSERT A NEW LINE IN TEXT FILE ON A LINE ON RMEOTE MACHINE
+
+      lineinfile:
+        path: ~/Welcome/test.txt
+        insertafter: 'This is the first line'
+        line: 'I am Thendo Siphuma'
