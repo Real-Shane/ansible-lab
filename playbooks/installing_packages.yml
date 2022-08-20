@@ -1,0 +1,14 @@
+---
+- hosts: defaults
+  become: true
+  remote_user: master
+  become_user: root
+    
+  tasks:
+    - name: installing git
+      
+      apt:
+        name: 
+          - htop
+          - git
+        state: latest
