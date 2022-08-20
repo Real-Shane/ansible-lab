@@ -1,0 +1,10 @@
+
+---
+- hosts: localhost
+  connection: local
+
+  tasks:    
+    - name: clone ansible
+      git:
+        repo: https://github.com/ginigangadharan/vagrant-iac-usecases.git
+        dest: ~/
